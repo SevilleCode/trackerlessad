@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- Example of minimally-invasive advertising originally designed for TMC 498 Pro Seminar at Arizona State University -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sample</title>
+</head>
+
+<body>
+<a href="#" target="new" id="ad"><img src="smoke.png" alt="Descriptive Ad Text"></a>
+<!--This is how the ad would be set up. You would enter the URL of the advertising site in the href section. The smoke.png file is just a placeholder image, you can replace it with the image file for the ad.-->
+<script src="https://smtpjs.com/v3/smtp.js"> <!-- This is a free JavaScript file that allows e-mail sending in a browser through JavaScript -->
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- This is the document library that allows the .onclick function to run -->
+<!--There are two ways to set up the email. One is by using a secure token that you can sign up for at the SMTP.JS website. If you enter your email username and password, the site will give you a secure token that will protect your credentials.
+<script>document.getElementById("ad").onclick 
+Email.send({
+SecureToken : "",
+    To : 'someemail@myemailprovider.com',
+    From : "someotheremail@myemailprovider.com",
+    Subject : "New Click",
+    Body : "Your ad has been clicked on <insert website name here>"
+});
+</script>-->
+
+<!--The other way is to enter your username and password in plain text. THIS IS NOT RECOMMENDED!
+<script>document.getElementById("ad").onclick 
+Email.send({
+    Host : "stmphost.myemailprovider.com",
+    Username : "someemail@myemailprovider.com",
+    Password : "",
+    To : 'someotheremail@myemailprovider.com',
+    From : "someemail@myemailprovider.com",
+    Subject : "New Click",
+    Body : "Your ad has been clicked on <insert website name here>"
+</script>	-->
+</body>
+</html>
